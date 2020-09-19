@@ -18,8 +18,6 @@ def showstack(stack):
     print()
     for i in range(len(stack)-1,-1,-1):
         print(stack[i])
-def errmsg():
-    print("Sorry, the process did not complete successfully")
         
 stack=[]
 while True:
