@@ -1,3 +1,5 @@
+#Implementation of stack data structure
+
 def push(stack,item):
     stack.append(item)
 def pops(stack):
