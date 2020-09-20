@@ -1,41 +1,29 @@
-#Implementation of stack
-
-def push(stack,item):
-    stack.append(item)
-def pops(stack):
-    if len(stack)==0:
-        print("Underflow")
-    else:
-        stack.pop()
-def showtop(stack):
-    n=len(stack)
-    if n==0:
-        print("Underflow")
-    else:
-        print()
-        print(stack[n-1])
-def showstack(stack):
-    print()
-    for i in range(len(stack)-1,-1,-1):
-        print(stack[i],end=" ")
-        print()
-        
-stack=[]
+class stack:
+    def __init__(self):
+        self.items=[]
+    def is_empty(self):
+        return self.items==[]
+    def push(self,value):
+        self.items.append(value)
+    def pops(self):
+        return self.items.pop()
+    
+s=stack()
 while True:
-    print("\n1 Push\n2 Pop\n3 Show top\n4 Show stack\n5 Exit\n")
+    print("\n1 Push\n2 Pop\n3 Exit\n")
     ch=int(input("Enter your choice : "))
     if ch==1:
-        item=int(input("Enter the item : "))
-        push(stack,item)
-        print("\nSuccess")
+        value=int(input("Enter the item : "))
+        s.push(value)
+        print("\nSuccess :)")
     elif ch==2:
-        pops(stack)
-    elif ch==3:
-        showtop(stack)
+        if s.is_empty():
+            print("Underflow")
+        else:
+            print("\nPopped item : ",s.pops())
     elif ch==4:
-        showstack(stack)
+        exit()
     else:
-        print()
         print("Please enter a valid input")
 else:
     print("Please enter a valid input")
