@@ -1,4 +1,4 @@
-#Implementation of stack data structure
+#Implementation of stack
 
 def push(stack,item):
     stack.append(item)
@@ -17,7 +17,8 @@ def showtop(stack):
 def showstack(stack):
     print()
     for i in range(len(stack)-1,-1,-1):
-        print(stack[i])
+        print(stack[i],end=" ")
+        print()
         
 stack=[]
 while True:
